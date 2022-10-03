@@ -1,2 +1,2 @@
-# personal_scripts
+# personal scripts
 scripts I've written for myself
