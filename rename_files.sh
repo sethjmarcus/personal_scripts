@@ -26,7 +26,7 @@ fi
 # Loop through the folder where the name of the file matches "*.MP3". Type flag might be redundant here. The -tr flag allows for reverse (oldest first) ordering.
 # See above comment on how I got this.
 
-find $folder -name "*.MP3" -type f -print0 | xargs -0 ls -tr | while read i; do
+find $folder -iname "*.MP3" -type f -print0 | xargs -0 ls -tr | while read i; do
 	#Get parts of the date needed for renaming
 	MODDATE=$(stat -c %y "$i")
 	MODDAY=$(date -d "$MODDATE" '+%d')
